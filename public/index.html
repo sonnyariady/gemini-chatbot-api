@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RasaLokal - Rekomendasi Kuliner Lokal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-card" aria-label="Informasi aplikasi">
+      <div class="brand-badge">🍜 RasaLokal</div>
+      <h1>Temukan kuliner lokal sesuai lokasi, budget, dan selera kamu.</h1>
+      <p>
+        Tanya rekomendasi makanan khas daerah, hidden gem, tempat makan murah,
+        jajanan tradisional, sampai rute wisata kuliner harian.
+      </p>
+
+      <div class="feature-list">
+        <div>
+          <span>📍</span>
+          <strong>Berbasis lokasi</strong>
+          <small>Kota, area, atau kawasan terdekat</small>
+        </div>
+        <div>
+          <span>💸</span>
+          <strong>Sesuai budget</strong>
+          <small>Murah, menengah, atau premium</small>
+        </div>
+        <div>
+          <span>🌶️</span>
+          <strong>Sesuai selera</strong>
+          <small>Pedas, gurih, halal, ramah keluarga</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="chat-card" aria-label="Chatbot rekomendasi kuliner">
+      <header class="chat-header">
+        <div>
+          <p class="eyebrow">Chat Kuliner Lokal</p>
+          <h2>Rekomendasi Makan Hari Ini</h2>
+        </div>
+        <div class="bot-avatar" aria-hidden="true">🍽️</div>
+      </header>
+
+      <div class="quick-prompts" aria-label="Contoh prompt cepat">
+        <button
+          type="button"
+          data-prompt="Rekomendasikan kuliner lokal di Bandung yang murah, enak, dan cocok untuk makan siang."
+        >
+          Kuliner Bandung
+        </button>
+
+        <button
+          type="button"
+          data-prompt="Cari tempat makan malam lokal dengan budget maksimal 50 ribu."
+        >
+          Makan malam murah
+        </button>
+
+        <button
+          type="button"
+          data-prompt="Rekomendasikan hidden gem kuliner lokal di Jakarta Selatan yang cocok untuk nongkrong."
+        >
+          Hidden gem
+        </button>
+
+        <button
+          type="button"
+          data-prompt="Buatkan rute wisata kuliner 1 hari di Jogja dari pagi sampai malam."
+        >
+          Rute kuliner
+        </button>
+      </div>
+
+      <div id="chat-box" class="chat-box" aria-live="polite">
+        <div class="message bot welcome-message">
+          <p><strong>Halo, saya RasaLokal.</strong></p>
+          <p>
+            Saya bisa bantu cari rekomendasi kuliner lokal berdasarkan kota,
+            budget, selera, waktu makan, atau kebutuhan khusus.
+          </p>
+          <p>
+            Contoh: “Saya di Surabaya, mau makanan berkuah, pedas,
+            budget 40 ribu.”
+          </p>
+        </div>
+      </div>
+
+      <form id="chat-form" class="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Contoh: Cari soto enak di Surabaya budget 40 ribu..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Cari</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
